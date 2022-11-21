@@ -9,7 +9,6 @@ import { FetchDataService } from './services/fetch-data.service';
 export class AppComponent {
 
   constructor(private getData: FetchDataService) {
-    getData.getJSON();
   }
 
 

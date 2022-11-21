@@ -1,0 +1,74 @@
+.accordion {
+    padding: 15% 0%;
+    background-color: #E0E5EC;
+}
+
+.card {
+    margin: 10% 10%;
+    width: 80%;
+    border-radius: 5px;
+
+    background-color: #E0E5EC;
+    box-shadow: -5px -5px 16px #ffffff, 5px 5px 16px #A3B1C6;
+}
+
+.headings {
+    display: flex;
+    padding: 10px 10px;
+}
+
+.details {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 80%;
+}
+
+.user-photo {
+    vertical-align: middle;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.user-name {
+    font-size: 20px;
+    padding-left: 20px;
+}
+
+.collapse-button {
+    display: flex;
+    flex-direction: row;
+    width: 20%;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: none;
+}
+
+.caret {
+    background-color: #E0E5EC;
+}
+
+.collapse-button img {
+    width: 20px;
+
+    transform: rotate(0deg);
+    transition: all .25s ease-in;
+}
+
+.collapse-button:focus {
+    transform: rotate(90deg);
+    transition: all .25s ease-out;
+}
+
+
+.collapsed-details {
+    display: none;
+    padding: 10px 10px;
+    font-size: 18px;
+}
+
+.collapse-button:focus~.collapsed-details {
+    display: block;
+}

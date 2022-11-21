@@ -4,10 +4,12 @@ import { HttpClientModule } from '@angular/common/http'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { UserDetailsAccordionComponent } from './user-details-accordion/user-details-accordion.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    UserDetailsAccordionComponent
   ],
   imports: [
     BrowserModule,

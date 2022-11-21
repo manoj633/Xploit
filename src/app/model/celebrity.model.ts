@@ -1,4 +1,4 @@
-interface celebrity {
+export interface celebrity {
     id: number;
     first: string;
     last: string;
