@@ -1,18 +1,36 @@
 <div class="accordion">
-  <div class="card" *ngFor="let celeb of celebrities">
+  <div class="card" *ngFor="let celeb of celebrities; let i = index">
     <div class="headings">
       <div class="details">
         <img class="user-photo" [src]="celeb.picture" alt="" />
         <div class="user-name">{{ celeb.first + " " + celeb.last }}</div>
       </div>
-      <button class="collapse-button">
+      <button
+        class="collapse-button"
+        (click)="collapseClicked(i)"
+        [ngClass]="
+          !collapsed && collapsedAccordion === i
+            ? 'collapse-button-open'
+            : 'collapse-button-closed'
+        "
+      >
         <img class="caret" src="../../assets/caret.png" alt="" />
       </button>
     </div>
-    <div class="collapsed-details">
-      Matches an element with valid contents. For example, an input element with
-      the type 'email' that contains a validly formed email address or an empty
-      value if the control is not required.
-    </div>
+    <ng-container
+      class="collapsed-details"
+      *ngIf="!collapsed && i === collapsedAccordion && !editClicked"
+      ><app-user-description
+        [celeb]="celeb"
+        [index]="i"
+        (edited)="onEditClicked($event)"
+      ></app-user-description
+    ></ng-container>
+    <ng-container
+      class="collapsed-details"
+      *ngIf="!collapsed && i === collapsedAccordion && editClicked"
+    >
+      <app-user-edit [celeb]="celeb"></app-user-edit
+    ></ng-container>
   </div>
 </div>

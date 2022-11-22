@@ -1,0 +1,16 @@
+<div class="flex-wrapper">
+  <div class="age">Age:</div>
+
+  <div class="gender">Gender: {{ celeb.gender }}</div>
+
+  <div class="country">Country: {{ celeb.country }}</div>
+</div>
+
+<div class="description-heading">Description:</div>
+<div class="description">{{ celeb.description }}</div>
+<div class="buttons">
+  <button (click)="onEdit()"><img src="../../assets/edit.png" alt="" /></button
+  ><button (click)="onDelete()">
+    <img src="../../assets/delete.png" alt="" />
+  </button>
+</div>

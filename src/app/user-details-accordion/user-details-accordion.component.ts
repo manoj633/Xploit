@@ -10,16 +10,28 @@ import { CelebrityService } from '../services/celebrity-service.service';
 export class UserDetailsAccordionComponent implements OnInit {
 
   celebrities!: celebrity[];
+  collapsed!: boolean;
+  collapsedAccordion!: number;
+  editClicked!: boolean;
   constructor(private celebrityService: CelebrityService) { }
 
   ngOnInit(): void {
     this.celebrityService.getCelebrities().subscribe(data => {
-      console.log(data);
       this.celebrities = data;
-      console.log(this.celebrities);
     });
+    this.collapsed = true;
+    this.editClicked = false;
     console.log(this.celebrityService.getCelebrities());
   }
 
+  collapseClicked(num: number) {
+    this.collapsed = !this.collapsed;
+    this.collapsedAccordion = num;
+  }
+
+  onEditClicked(celebrityEdited: { index: number, editedCelebrity: celebrity }) {
+    this.editClicked = true;
+    console.log(celebrityEdited.editedCelebrity);
+  }
 
 }

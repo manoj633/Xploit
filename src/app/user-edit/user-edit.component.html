@@ -1,0 +1,32 @@
+<form>
+  <div class="flex-wrapper">
+    <div class="age">Age:</div>
+
+    <div class="gender">
+      Gender:
+      <select id="gender" name="gender">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="transgender">Transgender</option>
+        <option value="other">Other</option>
+        <option value="rns">Rather not say</option>
+      </select>
+    </div>
+
+    <div class="country">
+      Country: <input type="text" [value]="celeb.country" />
+    </div>
+  </div>
+
+  <div class="description-heading">Description:</div>
+  <div class="description">
+    <textarea type="text" [value]="celeb.description" rows="5"></textarea>
+  </div>
+  <div class="buttons-wrapper">
+    <button (click)="onSave()">
+      <img src="../../assets/save.png" alt="" /></button
+    ><button (click)="onCancel()">
+      <img src="../../assets/cancel.png" alt="" />
+    </button>
+  </div>
+</form>

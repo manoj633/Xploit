@@ -52,23 +52,69 @@
 
 .collapse-button img {
     width: 20px;
+    transition: all .5s ease-in;
+}
 
+.collapse-button-open {
+    transform: rotate(180deg);
+    transition: all .5s ease-out;
+}
+
+.collapse-button-closed {
     transform: rotate(0deg);
-    transition: all .25s ease-in;
+    transition: all .5s ease-out;
 }
-
-.collapse-button:focus {
-    transform: rotate(90deg);
-    transition: all .25s ease-out;
-}
-
 
 .collapsed-details {
-    display: none;
     padding: 10px 10px;
     font-size: 18px;
 }
 
-.collapse-button:focus~.collapsed-details {
-    display: block;
+@media screen and (min-width: 640px) {
+    .card {
+        margin: 5% 25%;
+        width: 50%;
+        border-radius: 5px;
+        background-color: #E0E5EC;
+        box-shadow: -5px -5px 16px #ffffff, 5px 5px 16px #a3b1c6;
+        padding: 20px;
+        transition: all .25s ease-out;
+    }
+
+    .card:hover {
+        box-shadow: 5px 5px 16px #ffffff, -5px -5px 16px #a3b1c6;
+    }
+
+    .flex-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .description-heading {
+        margin: 10px;
+    }
+
+    .description {
+        margin: 10px;
+    }
+
+    .buttons {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    button {
+        background: transparent;
+        border: none;
+    }
+
+    .buttons button img {
+        height: 30px;
+    }
+
+    .buttons button img:hover {
+        height: 35px;
+        transition: all .25s ease-out;
+    }
 }

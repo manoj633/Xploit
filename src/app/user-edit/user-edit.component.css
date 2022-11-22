@@ -1,0 +1,48 @@
+.age,
+.gender,
+.country,
+.description {
+    padding-bottom: 10px;
+}
+
+@media screen and (min-width: 640px) {
+
+    .flex-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .description-heading {
+        margin: 10px;
+    }
+
+    .description {
+        margin: 10px;
+    }
+
+    .buttons-wrapper {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    button {
+        background: transparent;
+        border: none;
+    }
+
+    .buttons-wrapper button img {
+        height: 30px;
+    }
+
+    .buttons-wrapper button img:hover {
+        height: 35px;
+        transition: all .25s ease-out;
+    }
+
+    .description textarea {
+        width: 100%;
+        word-wrap: break-word;
+        word-break: break-word;
+    }
+}
