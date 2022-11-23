@@ -1,4 +1,5 @@
 export interface celebrity {
+    ageInYears: number;
     id: number;
     first: string;
     last: string;

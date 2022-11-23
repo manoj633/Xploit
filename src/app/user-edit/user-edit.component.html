@@ -1,10 +1,12 @@
-<form>
+<form #userForm="ngForm" (ngSubmit)="onSave()">
   <div class="flex-wrapper">
-    <div class="age">Age:</div>
+    <div class="age form-control" name="age">
+      Age: <input type="text" [value]="celeb.ageInYears" />
+    </div>
 
     <div class="gender">
       Gender:
-      <select id="gender" name="gender">
+      <select id="gender" class="form-control" name="gender" name="gender">
         <option value="male">Male</option>
         <option value="female">Female</option>
         <option value="transgender">Transgender</option>
@@ -13,19 +15,25 @@
       </select>
     </div>
 
-    <div class="country">
+    <div class="country form-control" name="country">
       Country: <input type="text" [value]="celeb.country" />
     </div>
   </div>
 
   <div class="description-heading">Description:</div>
   <div class="description">
-    <textarea type="text" [value]="celeb.description" rows="5"></textarea>
+    <textarea
+      type="text"
+      [value]="celeb.description"
+      rows="5"
+      class="form-control"
+      name="description"
+    ></textarea>
   </div>
   <div class="buttons-wrapper">
-    <button (click)="onSave()">
+    <button type="submit" (click)="onSave()">
       <img src="../../assets/save.png" alt="" /></button
-    ><button (click)="onCancel()">
+    ><button type="button" (click)="onCancel()">
       <img src="../../assets/cancel.png" alt="" />
     </button>
   </div>

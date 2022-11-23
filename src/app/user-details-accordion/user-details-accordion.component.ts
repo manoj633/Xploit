@@ -21,7 +21,6 @@ export class UserDetailsAccordionComponent implements OnInit {
     });
     this.collapsed = true;
     this.editClicked = false;
-    console.log(this.celebrityService.getCelebrities());
   }
 
   collapseClicked(num: number) {

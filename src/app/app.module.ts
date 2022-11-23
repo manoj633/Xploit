@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { UserDetailsAccordionComponent } from './user-details-accordion/user-details-accordion.component';
 import { UserDescriptionComponent } from './user-description/user-description.component';
 import { UserEditComponent } from './user-edit/user-edit.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { UserEditComponent } from './user-edit/user-edit.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
