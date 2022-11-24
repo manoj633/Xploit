@@ -33,4 +33,8 @@ export class UserDetailsAccordionComponent implements OnInit {
     console.log(celebrityEdited.editedCelebrity);
   }
 
+  onDeleteClicked(index: { index: number }) {
+
+  }
+
 }

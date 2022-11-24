@@ -10,6 +10,7 @@ export class UserDescriptionComponent implements OnInit {
   @Input() celeb!: celebrity;
   @Input() index!: number;
   @Output() edited = new EventEmitter<{ index: number, editedCelebrity: celebrity }>();
+  @Output() deleted = new EventEmitter<{ index: number }>();
   constructor() { }
 
   ngOnInit(): void {
@@ -20,7 +21,7 @@ export class UserDescriptionComponent implements OnInit {
   }
 
   onDelete() {
-
+    this.deleted.emit({ index: this.index });
   }
 
 }
